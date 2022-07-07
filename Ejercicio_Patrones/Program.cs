@@ -8,11 +8,12 @@ AntiAereo e3 = new AntiAereo();
 
 Ejercito_Composite ejercito = new Ejercito_Composite();
 Ejercito_Artilleria_Composite artilleria = new Ejercito_Artilleria_Composite();
+ejercito.MeterTropa(artilleria);
 
-artilleria.MeterTropa(e1);
-artilleria.MeterTropa(e2);
+ejercito.MeterTropa(e1);
+ejercito.MeterTropa(e2);
 artilleria.MeterTropa(e3);
 
-Console.WriteLine($"Coste total: {artilleria.obtenerPrecio()}$");
-Console.WriteLine($"Blindaje total: {artilleria.obtenerBlindaje()}");
-Console.WriteLine($"Capacidad militar total: {artilleria.obtener_CM()}");
+Console.WriteLine($"Coste total: {ejercito.obtenerPrecio()}$");
+Console.WriteLine($"Blindaje total: {ejercito.obtenerBlindaje()}");
+Console.WriteLine($"Capacidad militar total: {ejercito.obtener_CM()}");
