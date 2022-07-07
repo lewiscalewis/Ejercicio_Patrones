@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ejercicio_Patrones.Ejercitos
 {
-    public class Ejercito_Composite : Tropa, ITropa
+    public class Ejercito_Composite : Tropa, ITropa, IEjercito_Composite
     {
         private List<ITropa> tropas = new List<ITropa>();
         private double precio = 0;

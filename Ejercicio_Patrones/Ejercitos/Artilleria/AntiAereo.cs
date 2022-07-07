@@ -22,6 +22,7 @@ namespace Ejercicio_Patrones.Ejercitos.Artilleria
             base.establecerVelocidad(this.velocidad);
             base.establecerPotenciaFuego(this.potencia_fuego);
             base.establecerPrecio(this.precio);
+            base.establecerTipo("artilleria");
         }
 
     }

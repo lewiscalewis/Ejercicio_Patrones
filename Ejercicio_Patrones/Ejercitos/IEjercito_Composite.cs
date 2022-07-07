@@ -9,6 +9,6 @@ namespace Ejercicio_Patrones.Ejercitos
     internal interface IEjercito_Composite
     {
         void MeterTropa(ITropa tropa);
-        void QuitarTropa();
+        void QuitarTropa(ITropa tropa);
     }
 }

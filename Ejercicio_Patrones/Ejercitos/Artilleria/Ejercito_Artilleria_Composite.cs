@@ -16,13 +16,10 @@ namespace Ejercicio_Patrones.Ejercitos.Artilleria
         private double potencia_fuego = 0;
         private string tipo = "artilleria";
 
-        public Ejercito_Artilleria_Composite()
-        {
-            base.establecerTipo(this.tipo);
-        }
+       
         public void MeterTropa(ITropa tropa)
         {
-            if (base.obtenerTipo().Equals(this.tipo))
+            if (this.tipo.Equals(tropa.obtenerTipo()))
             {
                 tropas.Add(tropa);
 
@@ -40,7 +37,7 @@ namespace Ejercicio_Patrones.Ejercitos.Artilleria
             }
             else
             {
-                throw new Exception();
+                Console.WriteLine("No se ha introducido una tropa del tipo artilleria");
             }
             
         }
@@ -60,9 +57,5 @@ namespace Ejercicio_Patrones.Ejercitos.Artilleria
             base.establecerPotenciaFuego(potencia_fuego);
         }
 
-        public void QuitarTropa()
-        {
-            throw new NotImplementedException();
-        }
     }
 }
