@@ -83,7 +83,7 @@ namespace Ejercicio_Patrones.Ejercitos
         {
             double total = 0;
 
-            total = (potencia_fuego * (velocidad / 2)) / (100 - blindaje);
+            total = ((potencia_fuego * velocidad) / 2) / (100 - blindaje);
 
             return total;
         }
