@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Ejercicio_Patrones.Ejercitos.Artilleria
 {
-    public class Ejercito_Artilleria_Composite : Tropa, ITropa, IEjercito_Composite
+    public class Ejercito_Artilleria_Composite : EntidadMilitar, IEntidadMilitar, IEjercito_Composite
     {
-        private List<ITropa> tropas = new List<ITropa>();
+        private List<IEntidadMilitar> tropas = new List<IEntidadMilitar>();
         private double precio = 0;
         private double velocidad = 0;
         private double blindaje = 0;
@@ -16,7 +16,7 @@ namespace Ejercicio_Patrones.Ejercitos.Artilleria
         private string tipo = "artilleria";
 
        
-        public void MeterTropa(ITropa tropa)
+        public void MeterTropa(IEntidadMilitar tropa)
         {
             if (this.tipo.Equals(tropa.obtenerTipo()))
             {
@@ -45,7 +45,7 @@ namespace Ejercicio_Patrones.Ejercitos.Artilleria
         {
             return tropas.Count;
         }
-        public void QuitarTropa(ITropa tropa)
+        public void QuitarTropa(IEntidadMilitar tropa)
         {
             tropas.Remove(tropa);
             precio -= tropa.obtenerPrecio();

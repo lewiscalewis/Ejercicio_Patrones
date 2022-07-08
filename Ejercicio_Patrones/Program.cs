@@ -2,10 +2,11 @@
 using Ejercicio_Patrones.Ejercitos;
 using Ejercicio_Patrones.Ejercitos.Builders;
 
-EjercitoGeneral ejercito_general = new EjercitoGeneral();
-var ejercito = ejercito_general.CrearEjercitoCompleto();
+BuilderEjercitosCompuestos ejercito_general = new BuilderEjercitosCompuestos();
+var ejercito = ejercito_general.CrearArtilleriaInfanteria();
+EntidadMilitar m = new EntidadMilitar();
 
-//Logs
+//logs
 Console.WriteLine($"Coste total: {ejercito.obtenerPrecio()}$");
 Console.WriteLine($"Velocidad total: {ejercito.obtenerVelocidad()}");
 Console.WriteLine($"Potencia de Fuego total: {ejercito.obtenerPotenciaFuego()}");

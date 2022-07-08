@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace Ejercicio_Patrones.Ejercitos.Caballeria
 {
-    public class TanqueAtaqueSombras: Tropa, ICaballeria
+    public class TanqueAtaqueSombras: EntidadMilitar, ICaballeria
     {
-        private double precio = 15600;
-        private string nombre = "Tanque de ataque Sombras-VB98";
-        private double velocidad = 7.3;
-        private double blindaje = 4.8;
-        private double potencia_fuego = 9.8;
+        public double precio { get; set; } = 15600;
+        public string nombre { get; set; } = "Tanque de ataque Sombras-VB98";
+        public double velocidad { get; set; } = 7.3;
+        public double blindaje { get; set; } = 4.8;
+        public double potencia_fuego { get; set; } = 9.8;
 
         public TanqueAtaqueSombras() : base()
         {

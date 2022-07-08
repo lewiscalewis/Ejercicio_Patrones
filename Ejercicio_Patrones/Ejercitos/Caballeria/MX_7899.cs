@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace Ejercicio_Patrones.Ejercitos.Caballeria
 {
-    public class MX_7899: Tropa, ICaballeria
+    public class MX_7899: EntidadMilitar, ICaballeria
     {
-        private double precio = 4200;
-        private string nombre = "Transporte MX-7899";
-        private double velocidad = 4.5;
-        private double blindaje = 1.4;
-        private double potencia_fuego = 0;
+        public double precio { get; set; } = 4200;
+        public string nombre { get; set; } = "Transporte MX-7899";
+        public double velocidad { get; set; } = 4.5;
+        public double blindaje { get; set; } = 1.4;
+        public double potencia_fuego { get; set; } = 0;
 
         public MX_7899() : base()
         {

@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace Ejercicio_Patrones.Ejercitos.Infanteria
 {
-    public class Sanitario: Tropa, IInfanteria
+    public class Sanitario: EntidadMilitar, IInfanteria
     {
-        private double precio = 500;
-        private string nombre = "Sanitario";
-        private double velocidad = 7;
-        private double blindaje = 5;
-        private double potencia_fuego = 0;
+        public double precio { get; set; } = 500;
+        public string nombre { get; set; } = "Sanitario";
+        public double velocidad { get; set; } = 7;
+        public double blindaje { get; set; } = 5;
+        public double potencia_fuego { get; set; } = 0;
 
         public Sanitario() : base()
         {

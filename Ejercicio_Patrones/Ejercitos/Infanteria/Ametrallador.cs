@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace Ejercicio_Patrones.Ejercitos.Infanteria
 {
-    public class Ametrallador: Tropa, IInfanteria
+    public class Ametrallador: EntidadMilitar, IInfanteria
     {
-        private double precio = 400;
-        private string nombre = "Ametrallador";
-        private double velocidad = 4;
-        private double blindaje = 0;
-        private double potencia_fuego = 10;
+        public double precio { get; set; } = 400;
+        public string nombre { get; set; } = "Ametrallador";
+        public double velocidad { get; set; } = 4;
+        public double blindaje { get; set; } = 0;
+        public double potencia_fuego { get; set; } = 10;
 
         public Ametrallador() : base()
         {

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ejercicio_Patrones.Ejercitos
 {
-    public interface ITropa
+    public interface IEntidadMilitar
     {
         void establecerNombre(string nombre);
         void establecerVelocidad(double velocidad);

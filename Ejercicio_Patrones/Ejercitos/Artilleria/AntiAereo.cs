@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace Ejercicio_Patrones.Ejercitos.Artilleria
 {
-    public class AntiAereo : Tropa, IArtilleria
+    public class AntiAereo : EntidadMilitar, IArtilleria
     {
 
-        private double precio = 1100;
-        private string nombre = "Cañon Antiaereo";
-        private double velocidad = 1;
-        private double blindaje = 0;
-        private double potencia_fuego = 22;
+        public double precio { get; set; } = 1100;
+        public string nombre { get; set; } = "Cañon Antiaereo";
+        public double velocidad { get; set; } = 1;
+        public double blindaje { get; set; } = 0;
+        public double potencia_fuego { get; set; } = 22;
 
         public AntiAereo() : base()
         {
@@ -24,6 +24,7 @@ namespace Ejercicio_Patrones.Ejercitos.Artilleria
             base.establecerPrecio(this.precio);
             base.establecerTipo("artilleria");
         }
+
 
     }
 }

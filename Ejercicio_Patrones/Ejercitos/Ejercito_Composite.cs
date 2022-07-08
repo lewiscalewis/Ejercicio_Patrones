@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace Ejercicio_Patrones.Ejercitos
 {
-    public class Ejercito_Composite : Tropa, ITropa, IEjercito_Composite
+    public class Ejercito_Composite : EntidadMilitar, IEntidadMilitar, IEjercito_Composite
     {
-        private List<ITropa> tropas = new List<ITropa>();
+        private List<IEntidadMilitar> tropas = new List<IEntidadMilitar>();
         private double precio = 0;
         private string nombre = "";
         private double velocidad = 0;
         private double blindaje = 0;
         private double potencia_fuego = 0;
 
-        public void MeterTropa(ITropa tropa)
+        public void MeterTropa(IEntidadMilitar tropa)
         {
             tropas.Add(tropa);
 
@@ -36,7 +36,7 @@ namespace Ejercicio_Patrones.Ejercitos
         {
             int total = 0;
 
-            foreach(ITropa item in tropas)
+            foreach(IEntidadMilitar item in tropas)
             {
                 try
                 {
@@ -51,7 +51,7 @@ namespace Ejercicio_Patrones.Ejercitos
             return total;
         }
 
-        public void QuitarTropa(ITropa tropa)
+        public void QuitarTropa(IEntidadMilitar tropa)
         {
             tropas.Remove(tropa);
             precio -= tropa.obtenerPrecio();

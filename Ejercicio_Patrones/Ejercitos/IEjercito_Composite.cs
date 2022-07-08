@@ -8,7 +8,7 @@ namespace Ejercicio_Patrones.Ejercitos
 {
     public interface IEjercito_Composite
     {
-        void MeterTropa(ITropa tropa);
-        void QuitarTropa(ITropa tropa);
+        void MeterTropa(IEntidadMilitar tropa);
+        void QuitarTropa(IEntidadMilitar tropa);
     }
 }

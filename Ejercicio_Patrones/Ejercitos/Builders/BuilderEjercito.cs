@@ -14,12 +14,12 @@ namespace Ejercicio_Patrones.Ejercitos.Builders
 {
     public class BuilderEjercito : IBuilder
     {
-        public ITropa CrearEjercitoArtilleria()
+        public IEntidadMilitar CrearEjercitoArtilleria()
         {
             FactoriaArtilleria factoriaArtilleria = new FactoriaArtilleria();
-            ITropa tropa1 = (ITropa)factoriaArtilleria.CrearAntiaereo();
-            ITropa tropa2 = (ITropa)factoriaArtilleria.CrearCañon();
-            ITropa tropa3 = (ITropa)factoriaArtilleria.CrearTorpederoMovil();
+            IEntidadMilitar tropa1 = (IEntidadMilitar)factoriaArtilleria.CrearAntiaereo();
+            IEntidadMilitar tropa2 = (IEntidadMilitar)factoriaArtilleria.CrearCañon();
+            IEntidadMilitar tropa3 = (IEntidadMilitar)factoriaArtilleria.CrearTorpederoMovil();
 
             Ejercito_Artilleria_Composite artilleria = new Ejercito_Artilleria_Composite();
             artilleria.MeterTropa(tropa1);
@@ -29,12 +29,12 @@ namespace Ejercicio_Patrones.Ejercitos.Builders
             return artilleria;
         }
 
-        public ITropa CrearEjercitoCaballeria()
+        public IEntidadMilitar CrearEjercitoCaballeria()
         {
             FactoriaCaballeria factoriaCaballeria = new FactoriaCaballeria();
-            ITropa tropa1 = (ITropa)factoriaCaballeria.CrearTanqueSombras();
-            ITropa tropa2 = (ITropa)factoriaCaballeria.CrearTransporteRapido();
-            ITropa tropa3 = (ITropa)factoriaCaballeria.CrearMX_7899();
+            IEntidadMilitar tropa1 = (IEntidadMilitar)factoriaCaballeria.CrearTanqueSombras();
+            IEntidadMilitar tropa2 = (IEntidadMilitar)factoriaCaballeria.CrearTransporteRapido();
+            IEntidadMilitar tropa3 = (IEntidadMilitar)factoriaCaballeria.CrearMX_7899();
 
             Ejercito_Caballeria_Composite caballeria = new Ejercito_Caballeria_Composite();
             caballeria.MeterTropa(tropa1);
@@ -44,12 +44,12 @@ namespace Ejercicio_Patrones.Ejercitos.Builders
             return caballeria;
         }
 
-        public ITropa CrearEjercitoInfanteria()
+        public IEntidadMilitar CrearEjercitoInfanteria()
         {
             FactoriaInfanteria factoriaInfanteria = new FactoriaInfanteria();  
-            ITropa tropa1 = (ITropa)factoriaInfanteria.CrearSanitario();
-            ITropa tropa2 = (ITropa)factoriaInfanteria.CrearBasica();
-            ITropa tropa3 = (ITropa)factoriaInfanteria.CrearAmetrallador();
+            IEntidadMilitar tropa1 = (IEntidadMilitar)factoriaInfanteria.CrearSanitario();
+            IEntidadMilitar tropa2 = (IEntidadMilitar)factoriaInfanteria.CrearBasica();
+            IEntidadMilitar tropa3 = (IEntidadMilitar)factoriaInfanteria.CrearAmetrallador();
 
             Ejercito_Infanteria_Composite infanteria = new Ejercito_Infanteria_Composite();
             infanteria.MeterTropa(tropa1);

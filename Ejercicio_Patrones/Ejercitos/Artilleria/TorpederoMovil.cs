@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace Ejercicio_Patrones.Ejercitos.Artilleria
 {
-    public class TorpederoMovil: Tropa, IArtilleria
+    public class TorpederoMovil: EntidadMilitar, IArtilleria
     {
-        private double precio = 1350;
-        private string nombre = "Torpedero Móvil";
-        private double velocidad = 3;
-        private double blindaje = 2;
-        private double potencia_fuego = 19;
+        public double precio { get; set; } = 1350;
+        public string nombre { get; set; } = "Torpedero Móvil";
+        public double velocidad { get; set; } = 3;
+        public double blindaje { get; set; } = 2;
+        public double potencia_fuego { get; set; } = 19;
 
         public TorpederoMovil() : base()
         {

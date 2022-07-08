@@ -8,8 +8,8 @@ namespace Ejercicio_Patrones.Ejercitos.Builders
 {
     public interface IBuilder
     {
-        ITropa CrearEjercitoArtilleria();
-        ITropa CrearEjercitoInfanteria();
-        ITropa CrearEjercitoCaballeria();
+        IEntidadMilitar CrearEjercitoArtilleria();
+        IEntidadMilitar CrearEjercitoInfanteria();
+        IEntidadMilitar CrearEjercitoCaballeria();
     }
 }

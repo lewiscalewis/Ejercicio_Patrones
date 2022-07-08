@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace Ejercicio_Patrones.Ejercitos.Infanteria
 {
-    public class Basica: Tropa, IInfanteria
+    public class Basica: EntidadMilitar, IInfanteria
     {
-        private double precio = 250;
-        private string nombre = "Infantería básica";
-        private double velocidad = 6;
-        private double blindaje = 0;
-        private double potencia_fuego = 7;
+        public double precio { get; set; } = 250;
+        public string nombre { get; set; } = "Infantería básica";
+        public double velocidad { get; set; } = 6;
+        public double blindaje { get; set; } = 0;
+        public double potencia_fuego { get; set; } = 7;
 
         public Basica() : base()
         {

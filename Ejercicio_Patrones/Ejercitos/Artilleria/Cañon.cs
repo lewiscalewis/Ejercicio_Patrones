@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace Ejercicio_Patrones.Ejercitos.Artilleria
 {
-    public class Cañon : Tropa, IArtilleria
+    public class Cañon : EntidadMilitar, IArtilleria
     {
-        private double precio = 1100;
-        private string nombre = "Cañon";
-        private double velocidad = 0;
-        private double blindaje = 0;
-        private double potencia_fuego = 14;
+        public double precio { get; set; } = 1100;
+        public string nombre { get; set; } = "Cañon";
+        public double velocidad { get; set; } = 0;
+        public double blindaje { get; set; } = 0;
+        public double potencia_fuego { get; set; } = 14;
 
         public Cañon() : base()
         {

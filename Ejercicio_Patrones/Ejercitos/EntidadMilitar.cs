@@ -6,18 +6,19 @@ using System.Threading.Tasks;
 
 namespace Ejercicio_Patrones.Ejercitos
 {
-    public class Tropa : ITropa
+    public class EntidadMilitar : IEntidadMilitar
     {
-        string nombre;
-        double velocidad;
-        double blindaje;
-        double potencia_fuego;
-        double precio;
-        string tipo;
-
-        public Tropa()
+        //Esto debería haberse hecho con {get; set} pero la costumbre con Java...
+        private string nombre;
+        private double velocidad;
+        private double blindaje;
+        private double potencia_fuego;
+        private double precio;
+        private string tipo;
+  
+        public EntidadMilitar()
         {
-
+          
         }
 
         public void establecerTipo(string tipo)

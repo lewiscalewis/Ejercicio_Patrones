@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace Ejercicio_Patrones.Ejercitos.Caballeria
 {
-    public class TransporteRapido: Tropa, ICaballeria
+    public class TransporteRapido: EntidadMilitar, ICaballeria
     {
-        private double precio = 1600;
-        private string nombre = "Transporte rápido TAXIN-66";
-        private double velocidad = 12;
-        private double blindaje = 0;
-        private double potencia_fuego = 0;
+        public double precio { get; set; } = 1600;
+        public string nombre { get; set; } = "Transporte rápido TAXIN-66";
+        public double velocidad { get; set; } = 12;
+        public double blindaje { get; set; } = 0;
+        public double potencia_fuego { get; set; } = 0;
 
         public TransporteRapido() : base()
         {
