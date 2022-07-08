@@ -7,9 +7,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="Ejercitos\Caballeria\" />
-    <Folder Include="Ejercitos\Infanteria\" />
-  </ItemGroup>
-
 </Project>

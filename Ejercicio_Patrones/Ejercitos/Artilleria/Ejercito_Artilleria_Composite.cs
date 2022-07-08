@@ -10,7 +10,6 @@ namespace Ejercicio_Patrones.Ejercitos.Artilleria
     {
         private List<ITropa> tropas = new List<ITropa>();
         private double precio = 0;
-        private string nombre = "";
         private double velocidad = 0;
         private double blindaje = 0;
         private double potencia_fuego = 0;
@@ -40,6 +39,11 @@ namespace Ejercicio_Patrones.Ejercitos.Artilleria
                 Console.WriteLine("No se ha introducido una tropa del tipo artilleria");
             }
             
+        }
+
+        public int ObtenerTropas()
+        {
+            return tropas.Count;
         }
         public void QuitarTropa(ITropa tropa)
         {

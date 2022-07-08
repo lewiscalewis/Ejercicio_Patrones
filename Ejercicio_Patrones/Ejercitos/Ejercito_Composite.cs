@@ -32,6 +32,11 @@ namespace Ejercicio_Patrones.Ejercitos
             base.establecerPotenciaFuego(potencia_fuego);
         }
 
+        public int ObtenerTropas()
+        {
+            return tropas.Count;
+        }
+
         public void QuitarTropa(ITropa tropa)
         {
             tropas.Remove(tropa);
