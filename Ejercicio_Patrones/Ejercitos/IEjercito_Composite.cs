@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ejercicio_Patrones.Ejercitos
 {
-    internal interface IEjercito_Composite
+    public interface IEjercito_Composite
     {
         void MeterTropa(ITropa tropa);
         void QuitarTropa(ITropa tropa);

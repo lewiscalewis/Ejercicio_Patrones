@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ejercicio_Patrones.Ejercitos.Infanteria
 {
-    public class Ametrallador: Tropa, ITropa, IInfanteria
+    public class Ametrallador: Tropa, IInfanteria
     {
         private double precio = 400;
         private string nombre = "Ametrallador";

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ejercicio_Patrones.Ejercitos.Caballeria
 {
-    public class TanqueAtaqueSombras: Tropa, ITropa, ICaballeria
+    public class TanqueAtaqueSombras: Tropa, ICaballeria
     {
         private double precio = 15600;
         private string nombre = "Tanque de ataque Sombras-VB98";

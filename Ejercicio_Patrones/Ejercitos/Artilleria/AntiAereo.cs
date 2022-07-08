@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ejercicio_Patrones.Ejercitos.Artilleria
 {
-    public class AntiAereo : Tropa,  ITropa, IArtilleria
+    public class AntiAereo : Tropa, IArtilleria
     {
 
         private double precio = 1100;
