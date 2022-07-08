@@ -10,6 +10,5 @@ namespace Ejercicio_Patrones.Ejercitos
     {
         void MeterTropa(ITropa tropa);
         void QuitarTropa(ITropa tropa);
-        int ObtenerTropas();
     }
 }

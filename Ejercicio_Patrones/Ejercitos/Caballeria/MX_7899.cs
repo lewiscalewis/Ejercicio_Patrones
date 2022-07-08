@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ejercicio_Patrones.Ejercitos.Caballeria
 {
-    public class MX_7899: Tropa, ITropa
+    public class MX_7899: Tropa, ITropa, ICaballeria
     {
         private double precio = 4200;
         private string nombre = "Transporte MX-7899";

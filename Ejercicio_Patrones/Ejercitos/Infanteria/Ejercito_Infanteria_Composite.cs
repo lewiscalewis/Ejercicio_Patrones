@@ -41,7 +41,7 @@ namespace Ejercicio_Patrones.Ejercitos.Infanteria
 
         }
 
-        public int ObtenerTropas()
+        public override int ObtenerTropas()
         {
             return tropas.Count;
         }

@@ -32,9 +32,23 @@ namespace Ejercicio_Patrones.Ejercitos
             base.establecerPotenciaFuego(potencia_fuego);
         }
 
-        public int ObtenerTropas()
+        public override int ObtenerTropas()
         {
-            return tropas.Count;
+            int total = 0;
+
+            foreach(ITropa item in tropas)
+            {
+                try
+                {
+                    total += item.ObtenerTropas();
+                }
+                catch (Exception e)
+                {
+                    total++;
+                }
+                
+            }
+            return total;
         }
 
         public void QuitarTropa(ITropa tropa)

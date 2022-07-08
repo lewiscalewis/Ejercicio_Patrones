@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ejercicio_Patrones.Ejercitos.Artilleria
 {
-    public class TorpederoMovil: Tropa, ITropa
+    public class TorpederoMovil: Tropa, ITropa, IArtilleria
     {
         private double precio = 1350;
         private string nombre = "Torpedero Móvil";

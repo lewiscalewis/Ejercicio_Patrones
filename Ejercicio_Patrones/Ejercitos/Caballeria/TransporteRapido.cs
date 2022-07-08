@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ejercicio_Patrones.Ejercitos.Caballeria
 {
-    public class TransporteRapido: Tropa, ITropa
+    public class TransporteRapido: Tropa, ITropa, ICaballeria
     {
         private double precio = 1600;
         private string nombre = "Transporte rápido TAXIN-66";

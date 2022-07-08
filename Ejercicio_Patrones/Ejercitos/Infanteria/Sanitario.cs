@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ejercicio_Patrones.Ejercitos.Infanteria
 {
-    public class Sanitario: Tropa, ITropa
+    public class Sanitario: Tropa, ITropa, IInfanteria
     {
         private double precio = 500;
         private string nombre = "Sanitario";

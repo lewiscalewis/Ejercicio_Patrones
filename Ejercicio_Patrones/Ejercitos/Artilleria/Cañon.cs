@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ejercicio_Patrones.Ejercitos.Artilleria
 {
-    public class Cañon : Tropa, ITropa
+    public class Cañon : Tropa, ITropa, IArtilleria
     {
         private double precio = 1100;
         private string nombre = "Cañon";

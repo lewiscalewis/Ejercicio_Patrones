@@ -1,0 +1,15 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Ejercicio_Patrones.Ejercitos.Artilleria.Factorias
+{
+    public interface IFactoriaArtilleria
+    {
+        IArtilleria CrearAntiaereo();
+        IArtilleria CrearCañon();
+        IArtilleria CrearTorpederoMovil();
+    }
+}

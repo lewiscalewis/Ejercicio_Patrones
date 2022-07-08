@@ -19,14 +19,6 @@ namespace Ejercicio_Patrones.Ejercitos
         {
 
         }
-        public Tropa(string nombre, double velocidad, double blindaje, double potencia_fuego, double precio)
-        {
-            this.nombre = nombre;
-            this.velocidad = velocidad;
-            this.blindaje = blindaje;
-            this.potencia_fuego = potencia_fuego;
-            this.precio = precio;
-        }
 
         public void establecerTipo(string tipo)
         {
@@ -93,6 +85,11 @@ namespace Ejercicio_Patrones.Ejercitos
             total = (potencia_fuego * (velocidad / 2)) / (100 - blindaje);
 
             return total;
+        }
+
+        public virtual int ObtenerTropas()
+        {
+            return 1;
         }
     }
 }

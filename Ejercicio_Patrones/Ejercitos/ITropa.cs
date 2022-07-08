@@ -21,5 +21,6 @@ namespace Ejercicio_Patrones.Ejercitos
         double obtenerPrecio();
         double obtener_CM();
         string obtenerTipo();
+        int ObtenerTropas();
     }
 }
