@@ -8,11 +8,11 @@ namespace Ejercicio_Patrones.Ejercitos.Caballeria
 {
     public class TanqueAtaqueSombras: EntidadMilitar, ICaballeria
     {
-        public double precio { get; set; } = 15600;
-        public string nombre { get; set; } = "Tanque de ataque Sombras-VB98";
-        public double velocidad { get; set; } = 7.3;
-        public double blindaje { get; set; } = 4.8;
-        public double potencia_fuego { get; set; } = 9.8;
+        public double precio { get => 15600; set => base.establecerPrecio(value); }
+        public string nombre { get => "Tanque de ataque Sombras-VB98"; set => base.establecerNombre(value); }
+        public double velocidad { get => 7.3; set => base.establecerVelocidad(value); }
+        public double blindaje { get => 4.8; set => base.establecerBlindaje(value); }
+        public double potencia_fuego { get => 9.8; set => base.establecerPotenciaFuego(value); }
 
         public TanqueAtaqueSombras() : base()
         {

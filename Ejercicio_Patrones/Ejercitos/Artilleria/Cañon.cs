@@ -8,11 +8,11 @@ namespace Ejercicio_Patrones.Ejercitos.Artilleria
 {
     public class Cañon : EntidadMilitar, IArtilleria
     {
-        public double precio { get; set; } = 1100;
-        public string nombre { get; set; } = "Cañon";
-        public double velocidad { get; set; } = 0;
-        public double blindaje { get; set; } = 0;
-        public double potencia_fuego { get; set; } = 14;
+        public double precio { get => 1100; set => base.establecerPrecio(value); }
+        public string nombre { get => "Cañon"; set => base.establecerNombre(value); }
+        public double velocidad { get => 0; set => base.establecerVelocidad(value); }
+        public double blindaje { get => 0; set => base.establecerBlindaje(value); }
+        public double potencia_fuego { get => 14; set => base.establecerPotenciaFuego(value); }
 
         public Cañon() : base()
         {

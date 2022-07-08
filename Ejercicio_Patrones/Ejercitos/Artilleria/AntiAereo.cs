@@ -9,11 +9,11 @@ namespace Ejercicio_Patrones.Ejercitos.Artilleria
     public class AntiAereo : EntidadMilitar, IArtilleria
     {
 
-        public double precio { get; set; } = 1100;
-        public string nombre { get; set; } = "Cañon Antiaereo";
-        public double velocidad { get; set; } = 1;
-        public double blindaje { get; set; } = 0;
-        public double potencia_fuego { get; set; } = 22;
+        public double precio { get => 1100; set => base.establecerPrecio(value); }
+        public string nombre { get => "Cañon Antiaereo"; set => base.establecerNombre(value); }
+        public double velocidad { get => 1; set => base.establecerVelocidad(value); }
+        public double blindaje { get => 0; set => base.establecerBlindaje(value); }
+        public double potencia_fuego { get => 22; set => base.establecerPotenciaFuego(value); }
 
         public AntiAereo() : base()
         {

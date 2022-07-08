@@ -8,11 +8,11 @@ namespace Ejercicio_Patrones.Ejercitos.Infanteria
 {
     public class Ametrallador: EntidadMilitar, IInfanteria
     {
-        public double precio { get; set; } = 400;
-        public string nombre { get; set; } = "Ametrallador";
-        public double velocidad { get; set; } = 4;
-        public double blindaje { get; set; } = 0;
-        public double potencia_fuego { get; set; } = 10;
+        public double precio { get => 400; set => base.establecerPrecio(value); }
+        public string nombre { get => "Unidad de combate terrestre con ametralladora"; set => base.establecerNombre(value); }
+        public double velocidad { get => 4; set => base.establecerVelocidad(value); }
+        public double blindaje { get => 0; set => base.establecerBlindaje(value); }
+        public double potencia_fuego { get => 10; set => base.establecerPotenciaFuego(value); }
 
         public Ametrallador() : base()
         {

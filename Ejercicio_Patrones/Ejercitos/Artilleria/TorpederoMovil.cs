@@ -8,11 +8,11 @@ namespace Ejercicio_Patrones.Ejercitos.Artilleria
 {
     public class TorpederoMovil: EntidadMilitar, IArtilleria
     {
-        public double precio { get; set; } = 1350;
-        public string nombre { get; set; } = "Torpedero Móvil";
-        public double velocidad { get; set; } = 3;
-        public double blindaje { get; set; } = 2;
-        public double potencia_fuego { get; set; } = 19;
+        public double precio { get => 1350; set => base.establecerPrecio(value); }
+        public string nombre { get => "Torpedero Móvil"; set => base.establecerNombre(value); }
+        public double velocidad { get => 3; set => base.establecerVelocidad(value); }
+        public double blindaje { get => 2; set => base.establecerBlindaje(value); }
+        public double potencia_fuego { get => 19; set => base.establecerPotenciaFuego(value); }
 
         public TorpederoMovil() : base()
         {

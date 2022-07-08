@@ -8,11 +8,11 @@ namespace Ejercicio_Patrones.Ejercitos.Caballeria
 {
     public class MX_7899: EntidadMilitar, ICaballeria
     {
-        public double precio { get; set; } = 4200;
-        public string nombre { get; set; } = "Transporte MX-7899";
-        public double velocidad { get; set; } = 4.5;
-        public double blindaje { get; set; } = 1.4;
-        public double potencia_fuego { get; set; } = 0;
+        public double precio { get => 4200; set => base.establecerPrecio(value); }
+        public string nombre { get => "Transporte MX-7899"; set => base.establecerNombre(value); }
+        public double velocidad { get => 4.5; set => base.establecerVelocidad(value); }
+        public double blindaje { get => 1.4; set => base.establecerBlindaje(value); }
+        public double potencia_fuego { get => 0; set => base.establecerPotenciaFuego(value); }
 
         public MX_7899() : base()
         {

@@ -8,11 +8,11 @@ namespace Ejercicio_Patrones.Ejercitos.Caballeria
 {
     public class TransporteRapido: EntidadMilitar, ICaballeria
     {
-        public double precio { get; set; } = 1600;
-        public string nombre { get; set; } = "Transporte rápido TAXIN-66";
-        public double velocidad { get; set; } = 12;
-        public double blindaje { get; set; } = 0;
-        public double potencia_fuego { get; set; } = 0;
+        public double precio { get => 1600; set => base.establecerPrecio(value); }
+        public string nombre { get => "Transporte rápido TAXIN-66"; set => base.establecerNombre(value); }
+        public double velocidad { get => 12; set => base.establecerVelocidad(value); }
+        public double blindaje { get => 0; set => base.establecerBlindaje(value); }
+        public double potencia_fuego { get => 0; set => base.establecerPotenciaFuego(value); }
 
         public TransporteRapido() : base()
         {

@@ -3,7 +3,7 @@ using Ejercicio_Patrones.Ejercitos;
 using Ejercicio_Patrones.Ejercitos.Builders;
 
 BuilderEjercitosCompuestos ejercito_general = new BuilderEjercitosCompuestos();
-var ejercito = ejercito_general.CrearArtilleriaInfanteria();
+var ejercito = ejercito_general.CrearEjercitoCompleto();
 EntidadMilitar m = new EntidadMilitar();
 
 //logs

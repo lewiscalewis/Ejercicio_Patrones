@@ -8,11 +8,11 @@ namespace Ejercicio_Patrones.Ejercitos.Infanteria
 {
     public class Basica: EntidadMilitar, IInfanteria
     {
-        public double precio { get; set; } = 250;
-        public string nombre { get; set; } = "Infantería básica";
-        public double velocidad { get; set; } = 6;
-        public double blindaje { get; set; } = 0;
-        public double potencia_fuego { get; set; } = 7;
+        public double precio { get => 250; set => base.establecerPrecio(value); }
+        public string nombre { get => "Unidad básica de combate terrestre"; set => base.establecerNombre(value); }
+        public double velocidad { get => 6; set => base.establecerVelocidad(value); }
+        public double blindaje { get => 0; set => base.establecerBlindaje(value); }
+        public double potencia_fuego { get => 7; set => base.establecerPotenciaFuego(value); }
 
         public Basica() : base()
         {

@@ -8,11 +8,11 @@ namespace Ejercicio_Patrones.Ejercitos.Infanteria
 {
     public class Sanitario: EntidadMilitar, IInfanteria
     {
-        public double precio { get; set; } = 500;
-        public string nombre { get; set; } = "Sanitario";
-        public double velocidad { get; set; } = 7;
-        public double blindaje { get; set; } = 5;
-        public double potencia_fuego { get; set; } = 0;
+        public double precio { get => 500; set => base.establecerPrecio(value); }
+        public string nombre { get => "Unidad sanitaria de combate terrestre"; set => base.establecerNombre(value); }
+        public double velocidad { get => 7; set => base.establecerVelocidad(value); }
+        public double blindaje { get => 5; set => base.establecerBlindaje(value); }
+        public double potencia_fuego { get => 0; set => base.establecerPotenciaFuego(value); }
 
         public Sanitario() : base()
         {
