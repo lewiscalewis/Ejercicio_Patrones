@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Ejercicio_Patrones.Ejercitos
+﻿namespace Ejercicio_Patrones.Ejercitos
 {
     public interface IEntidadMilitar
     {
@@ -14,7 +8,7 @@ namespace Ejercicio_Patrones.Ejercitos
         void establecerPotenciaFuego(double potencia_fuego);
         void establecerPrecio(double precio);
         void establecerTipo(string tipo);
-        string obtenerNombre();
+        string? obtenerNombre();
         double obtenerVelocidad();
         double obtenerBlindaje();
         double obtenerPotenciaFuego();

@@ -1,18 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Ejercicio_Patrones.Ejercitos.Caballeria
+﻿namespace Ejercicio_Patrones.Ejercitos.Caballeria
 {
-    public class Ejercito_Caballeria_Composite : EntidadMilitar, IEntidadMilitar, IEjercito_Composite
+    public class Ejercito_Caballeria_Composite : EntidadMilitar, IEjercito_Composite
     {
-        private List<IEntidadMilitar> tropas = new List<IEntidadMilitar>();
-        private double precio = 0;
-        private double velocidad = 0;
-        private double blindaje = 0;
-        private double potencia_fuego = 0;
+        private List<IEntidadMilitar>? _tropas = new ();
+        private double precio;
+        private double velocidad;
+        private double blindaje;
+        private double potencia_fuego;
         private string tipo = "caballeria";
 
 
@@ -20,19 +14,19 @@ namespace Ejercicio_Patrones.Ejercitos.Caballeria
         {
             if (this.tipo.Equals(tropa.obtenerTipo()))
             {
-                tropas.Add(tropa);
+                _tropas.Add(tropa);
 
                 precio += tropa.obtenerPrecio();
-                base.establecerPrecio(precio);
+                establecerPrecio(precio);
 
                 velocidad += tropa.obtenerVelocidad();
-                base.establecerVelocidad(velocidad);
+                establecerVelocidad(velocidad);
 
                 blindaje += tropa.obtenerBlindaje();
-                base.establecerBlindaje(blindaje);
+                establecerBlindaje(blindaje);
 
                 potencia_fuego += tropa.obtenerPotenciaFuego();
-                base.establecerPotenciaFuego(potencia_fuego);
+                establecerPotenciaFuego(potencia_fuego);
             }
             else
             {
@@ -43,22 +37,22 @@ namespace Ejercicio_Patrones.Ejercitos.Caballeria
 
         public override int ObtenerTropas()
         {
-            return tropas.Count;
+            return _tropas.Count;
         }
         public void QuitarTropa(IEntidadMilitar tropa)
         {
-            tropas.Remove(tropa);
+            _tropas.Remove(tropa);
             precio -= tropa.obtenerPrecio();
-            base.establecerPrecio(precio);
+            establecerPrecio(precio);
 
             velocidad -= tropa.obtenerVelocidad();
-            base.establecerVelocidad(velocidad);
+            establecerVelocidad(velocidad);
 
             blindaje -= tropa.obtenerBlindaje();
-            base.establecerBlindaje(blindaje);
+            establecerBlindaje(blindaje);
 
             potencia_fuego -= tropa.obtenerPotenciaFuego();
-            base.establecerPotenciaFuego(potencia_fuego);
+            establecerPotenciaFuego(potencia_fuego);
         }
     }
 }

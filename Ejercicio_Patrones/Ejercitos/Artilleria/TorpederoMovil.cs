@@ -1,27 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Ejercicio_Patrones.Ejercitos.Artilleria
+﻿namespace Ejercicio_Patrones.Ejercitos.Artilleria
 {
     public class TorpederoMovil: EntidadMilitar, IArtilleria
     {
-        public double precio { get => 1350; set => base.establecerPrecio(value); }
-        public string nombre { get => "Torpedero Móvil"; set => base.establecerNombre(value); }
-        public double velocidad { get => 3; set => base.establecerVelocidad(value); }
-        public double blindaje { get => 2; set => base.establecerBlindaje(value); }
-        public double potencia_fuego { get => 19; set => base.establecerPotenciaFuego(value); }
+        public double precio { get => 1350; set => establecerPrecio(value); }
+        public string nombre { get => "Torpedero Móvil"; set => establecerNombre(value); }
+        public double velocidad { get => 3; set => establecerVelocidad(value); }
+        public double blindaje { get => 2; set => establecerBlindaje(value); }
+        public double potencia_fuego { get => 19; set => establecerPotenciaFuego(value); }
 
-        public TorpederoMovil() : base()
+        public TorpederoMovil()
         {
-            base.establecerBlindaje(this.blindaje);
-            base.establecerNombre(this.nombre);
-            base.establecerVelocidad(this.velocidad);
-            base.establecerPotenciaFuego(this.potencia_fuego);
-            base.establecerPrecio(this.precio);
-            base.establecerTipo("artilleria");
+            establecerBlindaje(this.blindaje);
+            establecerNombre(this.nombre);
+            establecerVelocidad(this.velocidad);
+            establecerPotenciaFuego(this.potencia_fuego);
+            establecerPrecio(this.precio);
+            establecerTipo("artilleria");
         }
     }
 }

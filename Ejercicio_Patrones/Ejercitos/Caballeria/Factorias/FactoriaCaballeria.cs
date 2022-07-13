@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Ejercicio_Patrones.Ejercitos.Caballeria.Factorias
+﻿namespace Ejercicio_Patrones.Ejercitos.Caballeria.Factorias
 {
     public class FactoriaCaballeria : IFactoriaCaballeria
     {

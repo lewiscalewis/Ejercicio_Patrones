@@ -1,10 +1,9 @@
 ﻿// See https://aka.ms/new-console-template for more information
-using Ejercicio_Patrones.Ejercitos;
+
 using Ejercicio_Patrones.Ejercitos.Builders;
 
 BuilderEjercitosCompuestos ejercito_general = new BuilderEjercitosCompuestos();
-var ejercito = ejercito_general.CrearArtilleriaInfanteria();
-EntidadMilitar m = new EntidadMilitar();
+var ejercito = ejercito_general.CrearEjercitoCompleto();
 
 //logs
 Console.WriteLine($"Coste total: {ejercito.obtenerPrecio()}$");

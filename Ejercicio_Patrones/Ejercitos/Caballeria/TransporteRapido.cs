@@ -1,27 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Ejercicio_Patrones.Ejercitos.Caballeria
+﻿namespace Ejercicio_Patrones.Ejercitos.Caballeria
 {
     public class TransporteRapido: EntidadMilitar, ICaballeria
     {
-        public double precio { get => 1600; set => base.establecerPrecio(value); }
-        public string nombre { get => "Transporte rápido TAXIN-66"; set => base.establecerNombre(value); }
-        public double velocidad { get => 12; set => base.establecerVelocidad(value); }
-        public double blindaje { get => 0; set => base.establecerBlindaje(value); }
-        public double potencia_fuego { get => 0; set => base.establecerPotenciaFuego(value); }
+        public double precio { get => 1600; set => establecerPrecio(value); }
+        public string nombre { get => "Transporte rápido TAXIN-66"; set => establecerNombre(value); }
+        public double velocidad { get => 12; set => establecerVelocidad(value); }
+        public double blindaje { get => 0; set => establecerBlindaje(value); }
+        public double potencia_fuego { get => 0; set => establecerPotenciaFuego(value); }
 
-        public TransporteRapido() : base()
+        public TransporteRapido()
         {
-            base.establecerBlindaje(this.blindaje);
-            base.establecerNombre(this.nombre);
-            base.establecerVelocidad(this.velocidad);
-            base.establecerPotenciaFuego(this.potencia_fuego);
-            base.establecerPrecio(this.precio);
-            base.establecerTipo("caballeria");
+            establecerBlindaje(this.blindaje);
+            establecerNombre(this.nombre);
+            establecerVelocidad(this.velocidad);
+            establecerPotenciaFuego(this.potencia_fuego);
+            establecerPrecio(this.precio);
+            establecerTipo("caballeria");
         }
     }
 }

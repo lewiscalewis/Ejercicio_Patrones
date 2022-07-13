@@ -1,20 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Ejercicio_Patrones.Ejercitos.Artilleria;
+﻿using Ejercicio_Patrones.Ejercitos.Artilleria;
 using Ejercicio_Patrones.Ejercitos.Caballeria;
 using Ejercicio_Patrones.Ejercitos.Infanteria;
-using Ejercicio_Patrones.Ejercitos.Artilleria.Factorias;
-using Ejercicio_Patrones.Ejercitos.Caballeria.Factorias;
-using Ejercicio_Patrones.Ejercitos.Infanteria.Factorias;
 
 namespace Ejercicio_Patrones.Ejercitos.Builders
 {
     public class BuilderEjercitosCompuestos
     {
-        IBuilder builder;
+        readonly IBuilder builder;
 
         public BuilderEjercitosCompuestos()
         {

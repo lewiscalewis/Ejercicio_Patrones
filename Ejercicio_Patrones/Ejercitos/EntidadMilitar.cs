@@ -1,89 +1,76 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Ejercicio_Patrones.Ejercitos
+﻿namespace Ejercicio_Patrones.Ejercitos
 {
     public class EntidadMilitar : IEntidadMilitar
     {
         //Esto debería haberse hecho con {get; set} pero la costumbre con Java...
-        private string nombre;
-        private double velocidad;
-        private double blindaje;
-        private double potencia_fuego;
-        private double precio;
-        private string tipo;
-  
-        public EntidadMilitar()
-        {
-          
-        }
+        private string? _nombre;
+        private double _velocidad;
+        private double _blindaje;
+        private double _potencia_fuego;
+        private double _precio;
+        private string? _tipo;
 
         public void establecerTipo(string tipo)
         {
-            this.tipo = tipo;
+            this._tipo = tipo;
         }
 
         public string obtenerTipo()
         {
-            return this.tipo;
+            return this._tipo!;
         }
         public void establecerBlindaje(double blindaje)
         {
-            this.blindaje = blindaje;
+            this._blindaje = blindaje;
         }
 
         public void establecerNombre(string nombre)
         {
-            this.nombre = nombre;
+            this._nombre = nombre;
         }
 
         public void establecerPotenciaFuego(double potencia_fuego)
         {
-            this.potencia_fuego = potencia_fuego;
+            this._potencia_fuego = potencia_fuego;
         }
 
         public void establecerPrecio(double precio)
         {
-            this.precio = precio;
+            this._precio = precio;
         }
 
         public void establecerVelocidad(double velocidad)
         {
-            this.velocidad = velocidad;
+            this._velocidad = velocidad;
         }
 
         public double obtenerBlindaje()
         {
-            return this.blindaje;
+            return this._blindaje;
         }
 
-        public string obtenerNombre()
+        public string? obtenerNombre()
         {
-            return this.nombre;
+            return this._nombre;
         }
 
         public double obtenerPotenciaFuego()
         {
-            return this.potencia_fuego;
+            return this._potencia_fuego;
         }
 
         public double obtenerPrecio()
         {
-            return this.precio;
+            return this._precio;
         }
 
         public double obtenerVelocidad()
         {
-            return this.velocidad;
+            return this._velocidad;
         }
         public double obtener_CM()
         {
-            double total = 0;
-
-            total = ((potencia_fuego * velocidad) / 2) / (100 - blindaje);
+            var total = ((_potencia_fuego * _velocidad) / 2) / (100 - _blindaje);
 
             return total;
         }

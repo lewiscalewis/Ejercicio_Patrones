@@ -1,48 +1,41 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Ejercicio_Patrones.Ejercitos
+﻿namespace Ejercicio_Patrones.Ejercitos
 {
-    public class Ejercito_Composite : EntidadMilitar, IEntidadMilitar, IEjercito_Composite
+    public class Ejercito_Composite : EntidadMilitar, IEjercito_Composite
     {
-        private List<IEntidadMilitar> tropas = new List<IEntidadMilitar>();
-        private double precio = 0;
-        private string nombre = "";
-        private double velocidad = 0;
-        private double blindaje = 0;
-        private double potencia_fuego = 0;
+        private List<IEntidadMilitar> _tropas = new();
+        private double precio;
+        private double velocidad;
+        private double blindaje;
+        private double potencia_fuego;
 
         public void MeterTropa(IEntidadMilitar tropa)
         {
-            tropas.Add(tropa);
+            _tropas.Add(tropa);
 
             precio += tropa.obtenerPrecio();
-            base.establecerPrecio(precio);
+            establecerPrecio(precio);
 
             velocidad += tropa.obtenerVelocidad();
-            base.establecerVelocidad(velocidad);
+            establecerVelocidad(velocidad);
 
             blindaje += tropa.obtenerBlindaje();
-            base.establecerBlindaje(blindaje);
+            establecerBlindaje(blindaje);
 
             potencia_fuego += tropa.obtenerPotenciaFuego();
-            base.establecerPotenciaFuego(potencia_fuego);
+            establecerPotenciaFuego(potencia_fuego);
         }
 
         public override int ObtenerTropas()
         {
             int total = 0;
 
-            foreach(IEntidadMilitar item in tropas)
+            foreach(IEntidadMilitar item in _tropas)
             {
                 try
                 {
                     total += item.ObtenerTropas();
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     total++;
                 }
@@ -53,18 +46,18 @@ namespace Ejercicio_Patrones.Ejercitos
 
         public void QuitarTropa(IEntidadMilitar tropa)
         {
-            tropas.Remove(tropa);
+            _tropas.Remove(tropa);
             precio -= tropa.obtenerPrecio();
-            base.establecerPrecio(precio);
+            establecerPrecio(precio);
 
             velocidad -= tropa.obtenerVelocidad();
-            base.establecerVelocidad(velocidad);
+            establecerVelocidad(velocidad);
 
             blindaje -= tropa.obtenerBlindaje();
-            base.establecerBlindaje(blindaje);
+            establecerBlindaje(blindaje);
 
             potencia_fuego -= tropa.obtenerPotenciaFuego();
-            base.establecerPotenciaFuego(potencia_fuego);
+            establecerPotenciaFuego(potencia_fuego);
         }
 
     }

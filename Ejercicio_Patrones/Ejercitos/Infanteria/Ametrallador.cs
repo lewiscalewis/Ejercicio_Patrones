@@ -1,27 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Ejercicio_Patrones.Ejercitos.Infanteria
+﻿namespace Ejercicio_Patrones.Ejercitos.Infanteria
 {
     public class Ametrallador: EntidadMilitar, IInfanteria
     {
-        public double precio { get => 400; set => base.establecerPrecio(value); }
-        public string nombre { get => "Unidad de combate terrestre con ametralladora"; set => base.establecerNombre(value); }
-        public double velocidad { get => 4; set => base.establecerVelocidad(value); }
-        public double blindaje { get => 0; set => base.establecerBlindaje(value); }
-        public double potencia_fuego { get => 10; set => base.establecerPotenciaFuego(value); }
+        public double precio { get => 400; set => establecerPrecio(value); }
+        public string nombre { get => "Unidad de combate terrestre con ametralladora"; set => establecerNombre(value); }
+        public double velocidad { get => 4; set => establecerVelocidad(value); }
+        public double blindaje { get => 0; set => establecerBlindaje(value); }
+        public double potencia_fuego { get => 10; set => establecerPotenciaFuego(value); }
 
-        public Ametrallador() : base()
+        public Ametrallador()
         {
-            base.establecerBlindaje(this.blindaje);
-            base.establecerNombre(this.nombre);
-            base.establecerVelocidad(this.velocidad);
-            base.establecerPotenciaFuego(this.potencia_fuego);
-            base.establecerPrecio(this.precio);
-            base.establecerTipo("infanteria");
+            establecerBlindaje(this.blindaje);
+            establecerNombre(this.nombre);
+            establecerVelocidad(this.velocidad);
+            establecerPotenciaFuego(this.potencia_fuego);
+            establecerPrecio(this.precio);
+            establecerTipo("infanteria");
         }
     }
 }

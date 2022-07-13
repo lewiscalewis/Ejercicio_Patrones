@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Ejercicio_Patrones.Ejercitos.Artilleria;
+﻿using Ejercicio_Patrones.Ejercitos.Artilleria;
 using Ejercicio_Patrones.Ejercitos.Caballeria;
 using Ejercicio_Patrones.Ejercitos.Infanteria;
 using Ejercicio_Patrones.Ejercitos.Artilleria.Factorias;
